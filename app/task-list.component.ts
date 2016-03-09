@@ -32,4 +32,10 @@ export class TaskListComponent {
     this.selectedTask = clickedTask;
     this.onTaskSelect.emit(clickedTask);
   }
+  // createTask(newDescription: string): void {
+  //   console.log(newDescription);
+  //   this.taskList.push(
+  //     new Task(newDescription, this.taskList.length)
+  //   );
+  // }
 }
