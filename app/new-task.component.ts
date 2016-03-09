@@ -13,12 +13,12 @@ import {Task} from './task.model';
   `
 })
 export class NewTaskComponent {
-  public onSubmitNewTask: EventEmitter<Task>;
+  public onSubmitNewTask: EventEmitter<String>;
   constructor(){
     this.onSubmitNewTask = new EventEmitter();
   }
   addTask(userDescription: HTMLInputElement){
-    console.log(userDescription.value);
+    this.onSubmitNewTask.emit(userDescription.value);
     userDescription.value = "";
   }
 }
